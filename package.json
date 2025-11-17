@@ -1,0 +1,63 @@
+{
+  "name": "@booyaka101/fudog-js",
+  "version": "1.0.0",
+  "private": false,
+  "main": "dist/index.js",
+  "module": "dist/index.mjs",
+  "exports": {
+    ".": {
+      "import": "./dist/index.mjs",
+      "require": "./dist/index.js",
+      "default": "./dist/index.mjs"
+    }
+  },
+  "types": "index.d.ts",
+  "sideEffects": false,
+  "files": [
+    "dist",
+    "index.d.ts",
+    "README.md"
+  ],
+  "publishConfig": {
+    "access": "public"
+  },
+  "scripts": {
+    "build": "tsup --config tsup.config.cjs",
+    "prepare": "npm run build",
+    "dev": "tsup --config tsup.config.cjs --watch"
+  },
+  "peerDependencies": {
+    "@emotion/react": "^11.0.0",
+    "@emotion/styled": "^11.0.0",
+    "@mui/material": "^6.0.0",
+    "react": "^18.0.0",
+    "react-dom": "^18.0.0"
+  },
+  "devDependencies": {
+    "tsup": "^8.0.0",
+    "typescript": "^5.9.3",
+    "@types/react": "^18.0.0",
+    "@types/react-dom": "^18.0.0"
+  },
+  "dependencies": {},
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Booyaka101/fudog-js.git"
+  },
+  "keywords": [
+    "react",
+    "ndi",
+    "preview",
+    "mjpeg",
+    "video",
+    "mui",
+    "component"
+  ],
+  "author": "Booyaka101",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Booyaka101/fudog-js/issues"
+  },
+  "homepage": "https://github.com/Booyaka101/fudog-js#readme",
+  "description": "React NDI preview component for MJPEG streams on Linux."
+}
